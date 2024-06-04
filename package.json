@@ -1,0 +1,30 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoanhDieu/nodejs_blog.git"
+  },
+  "keywords": [
+    "firstnode",
+    "hdnodejs"
+  ],
+  "author": "dieunh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HoanhDieu/nodejs_blog/issues"
+  },
+  "homepage": "https://github.com/HoanhDieu/nodejs_blog#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
