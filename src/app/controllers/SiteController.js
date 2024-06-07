@@ -1,7 +1,11 @@
+const Course = require("../models/Course");
+
 class SiteController {
   //[GET] /home
-  home(req, res) {
-    res.render("home");
+  async home(req, res) {
+    const courses = await Course.find({});
+    res.json(courses);
+    // res.render("home");
   }
   //[Get] /contact
   contact(req, res) {
