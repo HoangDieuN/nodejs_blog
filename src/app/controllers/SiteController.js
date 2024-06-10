@@ -1,10 +1,17 @@
+const { response } = require("express");
 const Course = require("../models/Course");
 
 class SiteController {
   //[GET] /home
-  async home(req, res) {
-    const courses = await Course.find({});
-    res.json(courses);
+  async home(req, res, next) {
+    const courses = await Course.find({})
+      .lean()
+      .then((courses) => {
+        res.render("home", { courses });
+      })
+      .catch((err) => {
+        next(err);
+      });
     // res.render("home");
   }
   //[Get] /contact
